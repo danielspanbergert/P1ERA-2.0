@@ -1,0 +1,33 @@
+:root {
+  --dark-plum: #4F0C28;
+  --burgundy: #7A1E35;
+  --plum-light: #6B1E3E;
+  --peri: #C5D2F8;
+  --peri-light: #E8ECF9;
+  --peri-dark: #8A9AD4;
+  --bg: #0A0306;
+  --ink: #F4EFEA;
+  --accent: var(--burgundy);
+}
+
+[data-theme="light"] {
+  --bg: #F4F2EE;
+  --ink: #1A0610;
+}
+
+/* Diagonal Floating Gradient for Hero */
+.hero {
+  background: linear-gradient(to top right, var(--dark-plum), var(--plum-light));
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hide cursor effect on interactive hover */
+.cursor-blob.is-hidden { opacity: 0; transition: opacity 0.3s ease; }
+a:hover, button:hover { cursor: default !important; }
